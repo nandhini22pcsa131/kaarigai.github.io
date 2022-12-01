@@ -109,7 +109,7 @@
                                     <br><br>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            Enter your Mobile &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input name="number" type="number" id="mobile" placeholder="Your mobile number" required="">
+                                            Enter your Mobile &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input name="mobile"  type="number" id="mobile" placeholder="Your mobile number" required="">
                                         </fieldset>
                                     </div>
                                     <br>
@@ -124,7 +124,7 @@
                                     <br>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button type="submit" id="form-submit" class="main-dark-button">SAVE</button>
+                                            <button type="submit"  id="form-submit" class="main-dark-button">SAVE</button>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -185,8 +185,36 @@
             alert("Hi " + name + " You Successfully Logged In");
             $("#nameshow").html(name);
         });
+
+
+        $(document).ready(function(){
+
+  $("#mobile").change (function(){
+
+    var value = $("#mobile").val();
+
+    var mobileNum = $(this).val();
+   
+var validateMobNum= /^\d*(?:\.\d{1,2})?$/;
+if (validateMobNum.test(mobileNum ) && mobileNum.length == 10) {
+   
+  
+}
+else {
+    alert("Invalid Mobile Number");
+    $("#mobile").val('');
+}
+
+});
+        
+});
+       
+       
+
+       
     </script>
 
 </body>
 
 </html>
+
