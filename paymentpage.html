@@ -204,6 +204,25 @@
             $("p").html();
 
         }
+          $(document).ready(function(){
+
+$("#cardnumber").change (function(){
+
+  var value = $("#cardnumber").val();
+  var mobileNum = $(this).val();   
+  var validateMobNum= /^\d*(?:\.\d{1,2})?$/;
+if (validateMobNum.test(mobileNum ) && mobileNum.length >= 12) {
+ 
+
+}
+else {
+  alert("Enter 16 digit card number");
+  $("#cardnumber").val('');
+}
+
+});
+      
+});
     </script>
 
 </body>
